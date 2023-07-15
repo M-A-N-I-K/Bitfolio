@@ -1,6 +1,8 @@
 import React from 'react'
+import Switcher from './Utils/switcher'
 
 const navbar = () => {
+
     return (
         <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:bg-opacity-90">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -14,6 +16,7 @@ const navbar = () => {
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
+                <Switcher />
                 <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
                         <li>
