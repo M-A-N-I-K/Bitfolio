@@ -21,7 +21,7 @@ const CryptoList = () => {
                     Cryptocurrency Prices by Market Cap
                 </h1>
                 <div className="flex p-4 items-center justify-center pb-4 bg-white dark:bg-gray-900">
-                    <div className="relative mb-3 bg-gray-800 rounded-md h-12 w-[80vw]" data-te-input-wrapper-init>
+                    <div className="relative mb-3 bg-gray-300 dark:bg-gray-800 rounded-md h-12 w-[80vw]" data-te-input-wrapper-init>
                         <input
                             type="search"
                             className="peer block min-h-[auto] w-full rounded border-0 bg-transparent pt-4 px-4 py-1 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
@@ -36,7 +36,7 @@ const CryptoList = () => {
             </div>
             <div className="mt-4 p-6 relative overflow-x-auto">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" className="px-6 py-3">
                                 Coin
@@ -55,7 +55,7 @@ const CryptoList = () => {
                     <tbody>
                         {coinData?.map((coin, key) => {
                             return (
-                                <tr key={key} className="bg-white border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <tr key={key} className="bg-gray-200 border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <th scope="row" className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                         <img className="w-10 h-10 rounded-full" src={coin.image} alt="Jese image" />
                                         <div className="pl-3">
@@ -63,13 +63,13 @@ const CryptoList = () => {
                                             <div className="font-normal text-gray-500">{coin.name}</div>
                                         </div>
                                     </th>
-                                    <td className="px-6 py-4 text-white font-semibold">
+                                    <td className="px-6 py-4 text-black dark:text-white font-semibold">
                                         ₹ {coin.current_price.toLocaleString('en-US')}
                                     </td>
                                     <td className={`px-6 py-4${Number(coin.market_cap_change_percentage_24h) < 0 ? " text-red-400" : " text-green-500"} font-semibold`}>
                                         {Number(coin.market_cap_change_percentage_24h).toFixed(2)}%
                                     </td>
-                                    <td className="px-6 py-4 text-white font-semibold">
+                                    <td className="px-6 py-4 text-black dark:text-white font-semibold">
                                         ₹ {coin.market_cap.toLocaleString('en-US')}
                                     </td>
                                 </tr>
