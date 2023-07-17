@@ -45,7 +45,7 @@ const Carousel = () => {
                         {coin?.price_change_percentage_24h?.toFixed(2)}%
                     </span>
                 </span>
-                <span style={{ fontSize: 22, fontWeight: 500 }}>
+                <span style={{ fontSize: 16, fontWeight: 500 }}>
                     INR {coin?.current_price.toFixed(2)}
                 </span>
             </Link>
@@ -61,11 +61,12 @@ const Carousel = () => {
         },
     };
     return (
-        <div className='flex items-center h-50'>
-            <AliceCarousel mouseTracking
+        <div className='flex justify-center items-center h-[50%]'>
+            <AliceCarousel
+                mouseTracking
                 infinite
                 autoPlayInterval={1000}
-                animationDuration={2500}
+                animationDuration={1500}
                 disableDotsControls
                 disableButtonsControls
                 responsive={responsive}

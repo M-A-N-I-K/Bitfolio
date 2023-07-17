@@ -12,7 +12,7 @@ const heroSection = () => {
         }}
         >
             <div className="flex flex-col justify-around h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed">
-                <div className="flex h-full items-center justify-center">
+                <div className="flex flex-col h-full items-center justify-center">
                     <div className="px-6 text-center text-white md:px-12">
                         <h1 className="mt-2 text-4xl font-bold tracking-tight md:text-5xl xl:text-7xl">
                             BitFolio
@@ -22,7 +22,9 @@ const heroSection = () => {
                         </p>
 
                     </div>
-                    <Carousel />
+                    <div>
+                        <Carousel />
+                    </div>
                 </div>
             </div>
 
